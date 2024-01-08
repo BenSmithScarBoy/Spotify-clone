@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(29, 29, 29);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.header__w {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    height: 65px;
+    background-color: black;
+    color: white;
+    border: 5px double white;
+}
+
+.header__w ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.header__w ul li {
+    padding: 0 12px;
+
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s;
+}
+
+.header__w ul li:hover {
+    background-color: green;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    margin: 90px auto 10px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-color: black;
+    position: relative;
+}
+
+
+.songList {
+    display: flex;
+    column-gap: 30px;
+}
+
+.songItemContainer {
+    display: block ;
+    margin-top: 40px;
+    flex-basis: 50%;
+}
+
+.savedSongItemContainer{
+    display: none;
+    margin-top: 40px;
+    flex-basis: 50%;
+}
+
+.player {
+    flex-basis: 50%;
+}
+
+.player__w {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+    padding: 15px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.brightnest{
+    filter: brightness(50%);
+}
+
+.music-image {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.songItem, .savedSongItem {
+    height: 50px;
+    display: flex;
+    background-color: green;
+    color: white;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.play-and-pause {
+    margin: 0 10px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.play-and-pause,
+.addToInterests, .info {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.addToInterests {
+    margin: 0 10px 0 10px;
+}
+
+.music-info__w {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.music-info {
+    margin-bottom: 10px;
+}
+
+.color {
+    color: green;
+}
+
+.prev-play-next {
+    display: flex;
+    column-gap: 20px;
+    font-size: 40px;
+}
+
+.rating {
+    display: flex;
+    font-size: 20px;
+}
+
+.bx-x-circle{
+    font-size: 30px;
+    margin-left: 8px;
+}
+
+.star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+}
+
+
+
+.previous-btn,
+.pausePlay-btn, 
+.next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.w{
+    display: flex;
+}
+.logo{
+    margin: 2px;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 0 2px 0 rgb(141, 238, 141);
+}
+
+.equalizer__w{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleX(-1) scaleY(-1);
+    min-height: 100px;
+    opacity: .7;
+}
+
+
+.main-music-info{
+    padding: 10px;
+    width: 400px;
+    background-color: rgb(108, 108, 108);
+    color: lightgreen;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    display: none; 
+    flex-direction: column;
+    row-gap: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.h{
+    color: rgb(251, 81, 81);
+    font-weight: 600;
+}
+
+.artist-pic{
+    width: 380px;
+    height: 350px;
+}
+
+.bg-for-modal{
+    display: none;
+    position: absolute;
+    height: 92%;
+    width: 93.6%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 998;
+}
+
+
+.delBtn{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: red;
+}
